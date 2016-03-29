@@ -12,7 +12,21 @@ namespace Clase03Programacion02
         Rueda ruedaDos;
         Rueda ruedaTres;
         Rueda ruedaCuatro;
-        
+        private string marca;
+        public static string fecha;
+
+        static Auto()//constructor estatico
+        {
+            Auto.fecha = (new DateTime().ToString());
+        }
+
+        public Auto(string Marca)
+        {
+            this.marca = "Fiat";
+            fecha = "ooo";
+        }
+
+
 
     }
 }

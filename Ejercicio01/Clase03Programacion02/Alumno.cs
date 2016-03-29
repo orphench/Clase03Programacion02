@@ -21,7 +21,7 @@ namespace Clase03Programacion02
             
         }
 
-        public bool compararme(Alumno unAlumno)
+        private bool compararme(Alumno unAlumno)
         {
             bool respuesta = false;
             
@@ -38,7 +38,7 @@ namespace Clase03Programacion02
             this.legajo = legajo;
         }
 
-        public int Getlegajo(int legajo)
+        public int Getlegajo()
         {
             return this.legajo;   
         }
@@ -48,6 +48,23 @@ namespace Clase03Programacion02
             this.nombre = nombre;
         }
         
+        public static bool compararDosAlumnos (Alumno alumno1, Alumno alumno2)
+        {
+            /*bool respuesta = false;
+            if(alumno1.nombre == alumno2.nombre && alumno1.legajo == alumno2.legajo )
+            {
+                respuesta = true;
+            }
+
+            return respuesta;*/
+
+            return alumno1.compararme(alumno2);
+        }
+
+        public static void MostrarAlumno(Alumno alumno)
+        {
+            Console.WriteLine(alumno.nombre + alumno.legajo);
+        }
 
         //Clases con primera letra en mayuscula y sustantivos
         //metodos en minuscula y verbos
